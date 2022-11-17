@@ -1,6 +1,5 @@
 import './App.css';
-
-import { Routes, Route, useNavigate} from 'react-router-dom'
+import { Routes, Route} from 'react-router-dom'
 
 import Main from './views/Main'
 import Create from './views/Create'

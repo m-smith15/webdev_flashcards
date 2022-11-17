@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react';
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 const CardList = (props) => {
+    const navigate = useNavigate();
+    const [showDescription, setShowDescription] = useState(false);
 
     const { removeFromDom } = props;
-    const deleteCard= (cardId) => {
+    const deleteCard = (cardId) => {
         axios.delete('http://localhost:8000/api/card/' + cardId)
             .then(res => {
                 removeFromDom(cardId)
@@ -13,17 +15,28 @@ const CardList = (props) => {
             .catch(err => console.error(err));
     }
 
+    const flipCard = (e) => {
+        setShowDescription(showDescription => !showDescription);
+    }
+
+    const editCard = (cardId) => {
+        navigate('/edit/' + cardId)
+    }
+
     return (
-        <div>
+        <div className="cardContainer container">
             {props.card.map((card, i) =>
-                <div key={i}>
-                    <Link to={"/card/" + card._id + "/edit"}> 
-                        Edit
-                    </Link> | {card._id} <br/>
-                    <div>{card.cardTitle}</div>
-                    <div>Description: {card.cardDescription}</div>
+                <div className="card" key={i} onClick={(e) => { flipCard() }}>
+                    {showDescription ?
+                    <div className="description">| Description | <br/> {card.cardDescription}</div> //true
+                        :
+                    <div className="title">| Title | <br/> {card.cardTitle}</div> //false (starts false by default)
+                    }
                     <br />
-                    <button onClick={(e) => { deleteCard(card._id) }}>
+                    <button onClick={(e) => { editCard(card._id)}} className="btn btn-secondary">
+                        Edit
+                    </button>
+                    <button onClick={(e) => { deleteCard(card._id) }} className="btn btn-secondary">
                         Delete
                     </button>
                 </div>

@@ -12,3 +12,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ul{
+  list-style-type: none;
+}
+.card{
+  border-radius:10px;
+  background-color:green;
+  border: solid black 2px;
+  margin:2px;
+  padding:2px;
+  width:55%;
+}
+.cardContainer{
+  grid-template-columns: repeat(3, 40%);
+  display:grid;
+}
+.card button{
+  display:block;
+  margin:2px;
+}
+
+.hidden{
+  display:none;
+}
