@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const CardForm = () => {
     const [cardTitle, setCardTitle] = useState("");
     const [cardDescription, setDescription] = useState("");
+    const navigate = useNavigate();
 
     //prevent default to stop page from reloading
     //make post request to create api in 
-    const formSubmitHandler = e => {
+    const formSubmitHandler = (e) => {
         e.preventDefault();
         axios.post('http://localhost:8000/api/create/card', {
             cardTitle,
             cardDescription
         })
-            .then(res => console.log(res))
+            .then(res => 
+                console.log(res),
+                navigate("/"))
             .catch(err => console.log(err))
     }
     //need a form submission handler

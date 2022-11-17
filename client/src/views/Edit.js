@@ -22,7 +22,9 @@ const Update = (props) => {
             cardTitle,
             cardDescription
         })
-            .then(res => console.log(res))
+            .then(res => 
+                console.log(res),
+                navigate('/'))
             .catch(err => console.error(err));
     }
 
@@ -31,7 +33,6 @@ const Update = (props) => {
         axios.delete('http://localhost:8000/api/card/' + cardId)
             .then(res => {
                 navigate("/");
-
             })
             .catch(err => console.error(err));
     }
