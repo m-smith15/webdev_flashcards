@@ -1,19 +1,9 @@
 import React, { useState } from 'react';
-import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 
 const CardList = (props) => {
     const navigate = useNavigate();
     const [showDescription, setShowDescription] = useState(false);
-
-    const { removeFromDom } = props;
-    const deleteCard = (cardId) => {
-        axios.delete('http://localhost:8000/api/card/' + cardId)
-            .then(res => {
-                removeFromDom(cardId)
-            })
-            .catch(err => console.error(err));
-    }
 
     const flipCard = (e) => {
         setShowDescription(showDescription => !showDescription);
@@ -35,9 +25,6 @@ const CardList = (props) => {
                     <br />
                     <button onClick={(e) => { editCard(card._id)}} className="btn btn-secondary">
                         Edit
-                    </button>
-                    <button onClick={(e) => { deleteCard(card._id) }} className="btn btn-secondary">
-                        Delete
                     </button>
                 </div>
             )}
