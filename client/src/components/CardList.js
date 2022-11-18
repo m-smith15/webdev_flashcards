@@ -19,7 +19,7 @@ const CardList = (props) => {
                     <div className="title">| Title | <br/> {card.cardTitle}</div> //false (starts false by default)
                     }
                     <br />
-                    <button onClick={(e) => { editCard(card._id)}} className="btn btn-secondary">
+                    <button onClick={() => { editCard(card._id)}} className="btn btn-secondary">
                         Edit
                     </button>
                 </div>

@@ -5,14 +5,15 @@ import { useParams, useNavigate } from 'react-router-dom';
 const Update = (props) => {
     const { id } = useParams();
     const [cardTitle, setCardTitle] = useState("");
-    const [cardDescription, setcardDescription] = useState("");
+    const [cardDescription, setCardDescription] = useState("");
     const navigate = useNavigate();
 
     useEffect((id) => {
         axios.get('http://localhost:8000/api/card/' + id)
             .then(res => {
+                console.log(res)
                 setCardTitle(res.data.cardTitle);
-                setcardDescription(res.data.cardDescription);
+                setCardDescription(res.data.cardDescription);
             })
     }, []);
 
@@ -58,7 +59,7 @@ const Update = (props) => {
                     <textarea type="text"
                         name="cardDescription"
                         value={cardDescription}
-                        onChange={(e) => { setcardDescription(e.target.value) }} />
+                        onChange={(e) => { setCardDescription(e.target.value) }} />
                 </p>
                 <input type="submit" value="Update Flashcard" />
             </form> <br />
