@@ -3,11 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const CardList = (props) => {
     const navigate = useNavigate();
-    const [showDescription, setShowDescription] = useState(false);
-
-    const flipCard = (e) => {
-        setShowDescription(showDescription => !showDescription);
-    }
+    const [showDescription, setShowDescription] = useState(null);
 
     const editCard = (cardId) => {
         navigate('/edit/' + cardId)
@@ -16,8 +12,8 @@ const CardList = (props) => {
     return (
         <div className="cardContainer container">
             {props.card.map((card, i) =>
-                <div className="card" key={i} onClick={(e) => { flipCard() }}>
-                    {showDescription ?
+                <div className="card" key={i} onClick={() => { setShowDescription(i) }}>
+                    {showDescription === i ?
                     <div className="description">| Description | <br/> {card.cardDescription}</div> //true
                         :
                     <div className="title">| Title | <br/> {card.cardTitle}</div> //false (starts false by default)
