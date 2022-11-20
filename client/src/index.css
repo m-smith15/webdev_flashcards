@@ -23,14 +23,19 @@ ul{
   margin:2px;
   padding:2px;
   width:55%;
+  height:100px;
+  text-align:left;
 }
 .cardContainer{
-  grid-template-columns: repeat(3, 40%);
   display:grid;
+  grid-template-columns: repeat(3, auto);
+  justify-items:center;
 }
 .card button{
   display:block;
   margin:2px;
+  width:20%;
+  align-self:end;
 }
 
 .hidden{
