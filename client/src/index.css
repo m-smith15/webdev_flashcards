@@ -22,9 +22,10 @@ ul{
   border: solid black 2px;
   margin:2px;
   padding:2px;
-  width:55%;
+  width:350px;
   height:100px;
   text-align:left;
+  position:initial;
 }
 .cardContainer{
   display:grid;

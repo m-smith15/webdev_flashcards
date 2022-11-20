@@ -8,6 +8,7 @@ const CardList = (props) => {
     const editCard = (cardId) => {
         navigate('/edit/' + cardId)
     }
+    
 
     return (
         <div className="cardContainer container">

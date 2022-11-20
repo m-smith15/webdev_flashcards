@@ -7,8 +7,7 @@ const CardForm = () => {
     const [cardDescription, setDescription] = useState("");
     const navigate = useNavigate();
 
-    //prevent default to stop page from reloading
-    //make post request to create api in 
+    //preventDefault prevents page reload
     const formSubmitHandler = (e) => {
         e.preventDefault();
         axios.post('http://localhost:8000/api/create/card', {
@@ -20,8 +19,7 @@ const CardForm = () => {
                 navigate("/"))
             .catch(err => console.log(err))
     }
-    //need a form submission handler
-    //also need onChange handlers for values in input fields - set__
+
     return (
         <div>
             <form onSubmit={formSubmitHandler}>
