@@ -8,10 +8,9 @@ const Update = (props) => {
     const [cardDescription, setCardDescription] = useState("");
     const navigate = useNavigate();
 
-    useEffect((id) => {
+    useEffect(() => {
         axios.get('http://localhost:8000/api/card/' + id)
             .then(res => {
-                console.log(res)
                 setCardTitle(res.data.cardTitle);
                 setCardDescription(res.data.cardDescription);
             })

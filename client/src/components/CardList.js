@@ -14,9 +14,9 @@ const CardList = (props) => {
             {props.card.map((card, i) =>
                 <div className="card" key={i} onClick={() => { setShowDescription(i) }}>
                     {showDescription === i ?
-                    <div className="description">| Description | <br/> {card.cardDescription}</div> //true
+                    <div className="description"><u>Description</u><br/> {card.cardDescription}</div> //true
                         :
-                    <div className="title">| Title | <br/> {card.cardTitle}</div> //false (starts false by default)
+                    <div className="title"><u>Title</u><br/> {card.cardTitle}</div> //false (starts false by default)
                     }
                     <br />
                     <button onClick={() => { editCard(card._id)}} className="btn btn-sm btn-secondary">
