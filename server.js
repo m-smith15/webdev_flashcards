@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+require('dotenv').config()
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -6,9 +7,8 @@ const port = 8000;
 //requiring the techs - express, cors, 
 // require('./server/config/mongoose.config');
 
-require('dotenv').config()
-const db = mongoose.connect(process.env.MONGO_URL);
 
+mongoose.connect(process.env.MONGO_URL);
 
 app.use(cors())
 app.use(express.json());
