@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 
-const Main = (props) => {
+const Main = () => {
     const [card, setCard] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const navigate = useNavigate();
