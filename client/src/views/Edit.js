@@ -4,12 +4,13 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 const Update = (props) => {
     const { id } = useParams();
+    const uri = 'https://webdev-flashcards.vercel.app/'
     const [cardTitle, setCardTitle] = useState("");
     const [cardDescription, setCardDescription] = useState("");
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get('http://localhost:8000/api/card/' + id)
+        axios.get(uri + 'api/card/' + id)
             .then(res => {
                 setCardTitle(res.data.cardTitle);
                 setCardDescription(res.data.cardDescription);
