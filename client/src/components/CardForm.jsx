@@ -10,7 +10,7 @@ const CardForm = () => {
     //preventDefault prevents page reload
     const formSubmitHandler = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8000/api/create/card', {
+        axios.post('/api/create/card', {
             cardTitle,
             cardDescription
         })

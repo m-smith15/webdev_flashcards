@@ -1,22 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import CardList from '../components/CardList';
 import axios from 'axios';
+import CardList from '../components/CardList';
 import { useNavigate } from 'react-router-dom';
 
 
-const Main = () => {
+const Main = (props) => {
     const [card, setCard] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const navigate = useNavigate();
-
-    useEffect(() => {
-        axios.get('http://localhost:8000/api/card')
-            .then(res => {
-                setCard(res.data);
-                setLoaded(true);
-            })
-            .catch(err => console.error(err));
-    }, []);
+    const querystring = require('query-string');
 
     const removeFromDom = cardId => {
         setCard(card.filter(card => card._id !== cardId));
@@ -25,6 +17,17 @@ const Main = () => {
     const navigateToCreate = () => {
         navigate('/create')
     }
+
+
+    useEffect(() => {
+        axios.get('/api/card')
+            .then(res => {
+                console.log(res)
+                setCard(res.data);
+                setLoaded(true);
+            })
+            .catch(err => console.error(err));
+    }, []);
 
     return (
         <div>
