@@ -37,7 +37,10 @@ const Practice = (props) => {
             <h1> Practice Time </h1>
             <div>See one that needs to be added?</div>
             <button onClick={navigateToCreate}>
-                Create a new flashcard!</button>
+                Create a new flashcard!</button> | 
+                | <button onClick={navigateToHome}>
+                Back to home
+            </button>
             <hr /><br />
             {loaded ?
                 <CardList card={card} removeFromDom={removeFromDom} /> //true
@@ -45,9 +48,6 @@ const Practice = (props) => {
                 <div>I know its here somewhere...</div> //false
             }
             <hr />
-            <button onClick={navigateToHome}>
-                Back to home
-            </button>
         </div>
     )
 }
