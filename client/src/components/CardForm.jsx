@@ -10,7 +10,7 @@ const CardForm = () => {
     //preventDefault prevents page reload
     const formSubmitHandler = (e) => {
         e.preventDefault();
-        axios.post('/api/create/card', {
+        axios.post('https://webdev-flashcards-backend.vercel.app/api/create/card', {
             cardTitle,
             cardDescription
         })
