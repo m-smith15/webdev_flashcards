@@ -27,7 +27,7 @@ const Practice = (props) => {
     const navigateToHome = () => {
         navigate('/')
     }
-    
+
     const navigateToCreate = () => {
         navigate('/create')
     }
@@ -39,7 +39,11 @@ const Practice = (props) => {
             <button onClick={navigateToCreate}>
                 Create a new flashcard!</button>
             <hr /><br />
-            {loaded && <CardList card={card} removeFromDom={removeFromDom} />}
+            {loaded ?
+                <CardList card={card} removeFromDom={removeFromDom} /> //true
+                :
+                <div>I know its here somewhere...</div> //false
+            }
             <hr />
             <button onClick={navigateToHome}>
                 Back to home
