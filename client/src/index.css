@@ -23,7 +23,7 @@ ul{
   margin:2px;
   padding:2px;
   width:350px;
-  height:100px;
+  height:200px;
   text-align:left;
   position:initial;
 }
@@ -39,6 +39,7 @@ ul{
   align-self:end;
 }
 
-.hidden{
-  display:none;
+.card div{
+  text-align:center;
+  height:100%;
 }
