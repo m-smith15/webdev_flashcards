@@ -5,6 +5,7 @@ import Main from './views/Main';
 import Create from './views/Create';
 import Edit from './views/Edit';
 import Practice from './views/Practice';
+import NotFound from './views/NotFound'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route element={<Create/>} path="/create" />
         <Route element={<Edit/>} path="/edit/:id" />
         <Route element={<Practice/>} path="/practice"/>
+        <Route element={<NotFound/>} status={404} path="*" />
         </Routes>
     </div>
   );
