@@ -4,7 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 const Update = (props) => {
     const { id } = useParams();
-    const uri = 'https://webdev-flashcards.vercel.app/'
+    const uri = 'https://webdev-flashcards-backend.vercel.app/'
     const [cardTitle, setCardTitle] = useState("");
     const [cardDescription, setCardDescription] = useState("");
     const navigate = useNavigate();
@@ -19,7 +19,7 @@ const Update = (props) => {
 
     const updateCard = e => {
         e.preventDefault();
-        axios.put('http://localhost:8000/api/card/' + id, {
+        axios.put('https://webdev-flashcards-backend.vercel.app/api/card/' + id, {
             cardTitle,
             cardDescription
         })
@@ -31,7 +31,7 @@ const Update = (props) => {
 
 
     const deleteCard = (cardId) => {
-        axios.delete('http://localhost:8000/api/card/' + cardId)
+        axios.delete('https://webdev-flashcards-backend.vercel.app/api/card/' + cardId)
             .then(res => {
                 navigate("/");
             })

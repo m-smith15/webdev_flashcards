@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 const Practice = (props) => {
-    const uri = 'https://webdev-flashcards.vercel.app/'
+    const uri = 'https://webdev-flashcards-backend.vercel.app/'
     const [card, setCard] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const navigate = useNavigate();
