@@ -5,6 +5,7 @@ Ongoing: <br/>
      <ul>
      <li> This way the branch name will correspond to the feature you're adding </li>
      <li> Also will make review and changing process smoother </li>
+     <li> Please delete previous pull request branch once merged </li>
      </ul>
 
 # First Contributions
