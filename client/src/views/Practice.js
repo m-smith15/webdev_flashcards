@@ -5,13 +5,17 @@ import axios from 'axios';
 
 
 const Practice = (props) => {
-    const uri = 'https://webdev-flashcards-backend.vercel.app/'
+    //Conditionally render the api endpoint base url for production or development environment
+    //Add https://webdev-flashcards-backend.vercel.app as REACT_APP_SERVER_URL in vercel env var
+    const BASE_URL = process.env.NODE_ENV === 'production'
+    ? process.env.REACT_APP_SERVER_URL
+    : 'http://localhost:8000'
     const [card, setCard] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(uri + 'api/card')
+        axios.get(BASE_URL + '/api/card')
             .then(res => {
                 console.log(res)
                 setCard(res.data);

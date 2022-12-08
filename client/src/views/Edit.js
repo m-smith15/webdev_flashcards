@@ -4,13 +4,17 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 const Update = (props) => {
     const { id } = useParams();
-    const uri = 'https://webdev-flashcards-backend.vercel.app/'
+    //Conditionally render the api endpoint base url for production or development environment
+    //Add https://webdev-flashcards-backend.vercel.app as REACT_APP_SERVER_URL in vercel env var
+    const BASE_URL = process.env.NODE_ENV === 'production'
+    ? process.env.REACT_APP_SERVER_URL
+    : 'http://localhost:8000'
     const [cardTitle, setCardTitle] = useState("");
     const [cardDescription, setCardDescription] = useState("");
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(uri + 'api/card/' + id)
+        axios.get(BASE_URL + '/api/card/' + id)
             .then(res => {
                 setCardTitle(res.data.cardTitle);
                 setCardDescription(res.data.cardDescription);
@@ -19,7 +23,7 @@ const Update = (props) => {
 
     const updateCard = e => {
         e.preventDefault();
-        axios.put('https://webdev-flashcards-backend.vercel.app/api/card/' + id, {
+        axios.put(BASE_URL + '/api/card/' + id, {
             cardTitle,
             cardDescription
         })
@@ -31,7 +35,7 @@ const Update = (props) => {
 
 
     const deleteCard = (cardId) => {
-        axios.delete('https://webdev-flashcards-backend.vercel.app/api/card/' + cardId)
+        axios.delete(BASE_URL + '/api/card/' + cardId)
             .then(res => {
                 navigate("/");
             })

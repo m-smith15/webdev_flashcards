@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+//Conditionally render the api endpoint base url for production or development environment
+//Add https://webdev-flashcards-backend.vercel.app as REACT_APP_SERVER_URL in vercel env var
+const BASE_URL = process.env.NODE_ENV === 'production'
+    ? process.env.REACT_APP_SERVER_URL
+    : 'http://localhost:8000'
+
 const CardForm = () => {
     const [cardTitle, setCardTitle] = useState("");
     const [cardDescription, setDescription] = useState("");
@@ -10,7 +16,7 @@ const CardForm = () => {
     //preventDefault prevents page reload
     const formSubmitHandler = (e) => {
         e.preventDefault();
-        axios.post('https://webdev-flashcards-backend.vercel.app/api/create/card', {
+        axios.post(BASE_URL + '/api/create/card', {
             cardTitle,
             cardDescription
         })
