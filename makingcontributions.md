@@ -1,12 +1,8 @@
 # Ongoing Contributions
-
-Ongoing: <br/>
-     Try to limit changes to one feature at a time
-     <ul>
-     <li> This way the branch name will correspond to the feature you're adding </li>
-     <li> Also will make review and changing process smoother </li>
-     <li> Please delete previous pull request branch once merged </li>
-     </ul>
+Help us keep the Repo clean! Try to limit changes to one feature at a time.
+ * This way the branch name will correspond to the feature you're adding
+ * Also will make review and changing process smoother
+ * Please delete previous pull request branch once merged
 
 # First Contributions
 
