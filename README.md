@@ -43,7 +43,7 @@ You can view and practice your knowledge at the following: https://webdev-flashc
 Feel free to explore and let us know what you think!
 
 ## Room for Improvement
-  - We have a running google doc of things we’re working on, and features or fixes we’d like to implement. You can view that google doc [here](https://docs.google.com/document/d/1WCxL-ObpanxA-0_K81IMbNgWlwDwPS5SKxNcyhSYlw0/edit).
+  - We have a running google doc of things we’re working on, and features we’d like to implement in the future. <br/> You can view that google doc [here](https://docs.google.com/document/d/1WCxL-ObpanxA-0_K81IMbNgWlwDwPS5SKxNcyhSYlw0/edit).
 
 ## Acknowledgements
 - A huge thank-you to [Coren](https://github.com/coren-frankel) for his help with the Vercel deployment!!
