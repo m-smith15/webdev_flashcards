@@ -24,7 +24,11 @@ When I mentioned the idea to Coren, the idea resonated with him as well. We imme
 | Mack Smith | [GitHub](https://github.com/m-smith15) | [LinkedIn](https://www.linkedin.com/in/macksmithlambeau/)
 
 ## Getting Involved
-If you’d like to get involved in helping to build out this application, then reach out to Mack or Coren on LinkedIn by sending either of us a message. We primarily collaborate through Discord when building this out, so you’ll need that as well! 
+If you’d like to get involved in helping to build out this application, then reach out to Mack or Coren on LinkedIn by sending either of us a message. To give you an idea of what collaboration looks like -
+ * We primarily collaborate through Discord when stuck on a problem, find new tech to utilize, or just want to say "hi".
+ * We plan to meet weekly for 30-45 minutes on Wednesday. The purpose is to discuss and document protocols and standards we'd like to implement for various processes. 
+ * We have a ZERO commitment policy. Meaning if you like to start contributing, there is no pressure to remain actively contributing! 
+<br/>
 Regardless of skill level, we’d love to have you join in any capacity! <br/>
 You can find instructions on how to make contributions in the makingcontributions.md file, or via this [link](https://github.com/m-smith15/webdev_flashcards/blob/master/makingcontributions.md)
 
