@@ -35,6 +35,7 @@ The database of flashcards is community built and maintained.
 
 ## Setup
 This is a MERN stack application, so the dependencies are located in the package.json files.<br/>
+This project is actually utilizing 2 deployments on Vercel currently. One to handle the frontend and another deployment to handle the backend. <br/> 
 (Client folder == frontend | Server folder == backend)<br/>
 <!-- TODO: Will describe process to fork and run locally once the dev | | localhost feature is added to project -->
 
