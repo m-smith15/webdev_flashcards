@@ -5,7 +5,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 const Update = (props) => {
     const { id } = useParams();
     //Conditionally render the api endpoint base url for production or development environment
-    //Add https://webdev-flashcards-backend.vercel.app as REACT_APP_SERVER_URL in vercel env var
     const BASE_URL = process.env.NODE_ENV === 'production'
     ? process.env.REACT_APP_SERVER_URL
     : 'http://localhost:8000'
