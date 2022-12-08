@@ -29,7 +29,7 @@ Regardless of skill level, we’d love to have you join in any capacity! <br/>
 You can find instructions on how to make contributions in the makingcontributions.md file, or via this [link](https://github.com/m-smith15/webdev_flashcards/blob/master/makingcontributions.md)
 
 ## Technologies Used
-This project is build with the MERN stack (MongoDB, Express, Node.js, React) and is hosted publicly on Vercel.
+This project is built with the MERN stack (MongoDB, Express, Node.js, React) and is hosted publicly on Vercel.
 The database of flashcards is community built and maintained.
 
 ## Setup
