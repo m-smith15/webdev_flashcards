@@ -1,6 +1,6 @@
 # Ongoing Contributions
 
-Ongoing:
+Ongoing: <br/>
      - Try to limit changes to one feature at a time
           - This way the branch name will correspond to the feature you're adding
           - Also will make review and changing process smoother
