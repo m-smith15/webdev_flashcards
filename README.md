@@ -20,7 +20,7 @@ When I mentioned the idea to Coren, the idea resonated with him as well. We imme
 ## Contributors
 | Name | GitHub | LinkedIn |
 | :---: | :---: | :---: |
-| Coren Frankel | [GitHub](https://github.com/coren-frankel) | [LinkedIn](https://www.linkedin.com/in/coren-frankel/)
+| Coren "Kern" Frankel | [GitHub](https://github.com/coren-frankel) | [LinkedIn](https://www.linkedin.com/in/coren-frankel/)
 | Mack Smith | [GitHub](https://github.com/m-smith15) | [LinkedIn](https://www.linkedin.com/in/macksmithlambeau/)
 
 ## Getting Involved
