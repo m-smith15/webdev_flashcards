@@ -40,7 +40,7 @@ This project is actually utilizing 2 deployments on Vercel currently. One to han
 
 ## Usage
 You can view and practice your knowledge at the following: https://webdev-flashcards.vercel.app/.<br/> 
-Feel free to explore and let us know what you think!
+Feel free to explore and let us know what you think!!
 
 ## Room for Improvement
   - We have a running google doc of things we’re working on, and features we’d like to implement in the future. <br/> You can view that google doc [here](https://docs.google.com/document/d/1WCxL-ObpanxA-0_K81IMbNgWlwDwPS5SKxNcyhSYlw0/edit).
