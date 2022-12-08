@@ -25,9 +25,8 @@ When I mentioned the idea to Coren, the idea resonated with him as well. We imme
 
 ## Getting Involved
 If you’d like to get involved in helping to build out this application, then reach out to Mack or Coren on LinkedIn by sending either of us a message. We primarily collaborate through Discord when building this out, so you’ll need that as well! 
-Regardless of skill level, we’d love to have you join in any capacity!
-
-<!-- TODO: Incorporate first contirbution instructions, or link to them somewhere -->
+Regardless of skill level, we’d love to have you join in any capacity! <br/>
+You can find instructions on how to make contributions in the makingcontributions.md file, or via this [link](https://github.com/m-smith15/webdev_flashcards/blob/master/makingcontributions.md)
 
 ## Technologies Used
 This project is build with the MERN stack (MongoDB, Express, Node.js, React) and is hosted publicly on Vercel.
