@@ -36,7 +36,7 @@ const Practice = (props) => {
     }
 
     return (
-        <div>
+        <div className="practice">
             <h1> Practice Time </h1>
             <div>See one that needs to be added?</div>
             <button onClick={navigateToCreate}>
