@@ -43,3 +43,25 @@ ul{
   text-align:center;
   height:100%;
 }
+
+.footer {
+  position:fixed;
+  display:flex;
+  bottom:0%;
+  width:100%;
+  justify-content:space-between;
+  background-color:#000000e0;
+  color:lightgrey;
+  height:10%;
+}
+.acknoledgement{
+  margin-left:3%;
+}
+
+.acknoledgement ul{
+  columns:2;
+}
+
+.gettingInvolved{
+  margin-right:3%;
+}
