@@ -5,8 +5,8 @@ import Main from './views/Main';
 import Create from './views/Create';
 import Edit from './views/Edit';
 import Practice from './views/Practice';
-import NotFound from './views/NotFound'
-import Footer from './components/Footer'
+import NotFound from './views/NotFound';
+import Footer from './components/Footer';
 
 
 function App() {
