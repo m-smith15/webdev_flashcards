@@ -11,7 +11,7 @@ const Footer = () => {
                 </ul>
             </div>
             <div className="gettingInvolved"> Want to get involved in the project? <br />
-                Learn more about getting involved <a href="">here</a>!
+                Learn more about getting involved <a href="https://github.com/m-smith15/webdev_flashcards/blob/master/makingcontributions.md">here</a>!
             </div>
         </div>
     )
