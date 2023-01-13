@@ -68,6 +68,11 @@ ul{
   border:lightgrey solid 1px;
   border-radius:10%;
 }
+.navigationItem button{
+  border:none;
+  background:transparent;
+  color:lightgray;
+}
 
 .footer {
   position:fixed;
