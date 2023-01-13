@@ -47,6 +47,27 @@ ul{
 .practice{
   margin-bottom:5%;
 }
+.header{
+  background-color:#000000e0;
+  /* Leaivng this in for now, I'm undecided on how I want to tackle the background image for the header */
+  /* background-image: url('/public/assets/Banner.png');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size:cover; */
+}
+.header h1{
+  color:steelblue
+}
+
+.navigationBar{
+  display:flex;
+  justify-content:space-evenly;
+}
+.navigationItem{
+  color:lightgrey;
+  border:lightgrey solid 1px;
+  border-radius:10%;
+}
 
 .footer {
   position:fixed;
