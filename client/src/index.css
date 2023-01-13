@@ -54,14 +54,16 @@ ul{
   background-repeat: no-repeat;
   background-position-x: center;
   background-size:cover; */
+  padding-bottom:1px;
 }
 .header h1{
-  color:steelblue
+  color:steelblue;
 }
 
 .navigationBar{
   display:flex;
   justify-content:space-evenly;
+  margin-bottom:1%;
 }
 .navigationItem{
   color:lightgrey;
