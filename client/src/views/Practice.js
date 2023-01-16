@@ -27,23 +27,10 @@ const Practice = (props) => {
         setCard(card.filter(card => card._id !== cardId));
     }
 
-    const navigateToHome = () => {
-        navigate('/')
-    }
-
-    const navigateToCreate = () => {
-        navigate('/create')
-    }
-
     return (
         <div className="practice">
             <h1> Practice Time </h1>
-            <div>See one that needs to be added?</div>
-            <button onClick={navigateToCreate}>
-                Create a new flashcard!</button> | 
-                | <button onClick={navigateToHome}>
-                Back to home
-            </button>
+            <div>Click on a flashcard to see the other side!</div>
             <hr /><br />
             {loaded ?
                 <CardList card={card} removeFromDom={removeFromDom} /> //true
