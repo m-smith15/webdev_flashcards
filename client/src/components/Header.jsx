@@ -11,7 +11,7 @@ const Header = () => {
         navigate('/')
     }
     const navigateToViewAll = () => {
-        navigate('/view/all')
+        navigate('/viewall')
     }
 
     return (
