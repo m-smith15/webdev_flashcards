@@ -8,6 +8,7 @@ import Practice from './views/Practice';
 import NotFound from './views/NotFound';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import ViewAll from './views/ViewAll';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route element={<Create/>} path="/create" />
         <Route element={<Edit/>} path="/edit/:id" />
         <Route element={<Practice/>} path="/practice"/>
+        <Route element={<ViewAll/>} path="/viewall"/>
         <Route element={<NotFound/>} status={404} path="*" />
       </Routes>
       <Footer />
