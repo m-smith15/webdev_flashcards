@@ -24,6 +24,11 @@ module.exports.getCard = (request, response) => {
         .then(card => response.json(card))
         .catch(err => response.json(err))
 }
+module.exports.getRandomSet = (request, response) => {
+    Card.aggregate([{ $sample: { size: 3 } }])
+        .then(card => response.json(card))
+        .catch(err => response.json(err))
+}
 module.exports.updateCard = (request, response) => {
     Card.findOneAndUpdate({_id:request.params.id}, request.body, {new:true})
         .then(updatedCard => response.json(updatedCard))

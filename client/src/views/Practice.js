@@ -13,7 +13,7 @@ const Practice = (props) => {
     const [sets, setSets] = useState(0);
 
     useEffect(() => {
-        axios.get(BASE_URL + '/api/card')
+        axios.get(BASE_URL + '/api/random')
             .then(res => {
                 console.log(res)
                 setCard(res.data);

@@ -8,4 +8,5 @@ module.exports = function(app){
     app.get('/api/card/:id', CardController.getCard);
     app.put('/api/card/:id', CardController.updateCard);
     app.delete('/api/card/:id', CardController.deleteCard);
+    app.get('/api/random', CardController.getRandomSet);
 }
