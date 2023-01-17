@@ -6,6 +6,7 @@ const CardList = (props) => {
     const [showDescription, setShowDescription] = useState(null);
     //passing sets in from Practice view - going to use this to reset the "showDescription" to false
 
+    //this will reset setShowDescription to null when the set counter increases
     useEffect(() => {
             if(props.sets > 0) {
                 setShowDescription(null);
