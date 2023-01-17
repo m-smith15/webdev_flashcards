@@ -32,7 +32,6 @@ const CardList = (props) => {
                     </button>
                 </div>
             )}
-            <div>{props.sets}</div>
         </div>
     )
 }
