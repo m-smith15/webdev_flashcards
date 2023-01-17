@@ -9,8 +9,6 @@ const CardList = (props) => {
     useEffect(() => {
             if(props.sets > 0) {
                 setShowDescription(null);
-                console.log("ran");
-                console.log(props.card);
             }
     }, [props.sets])
 
