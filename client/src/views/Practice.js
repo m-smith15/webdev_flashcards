@@ -36,12 +36,12 @@ const Practice = (props) => {
     return (
         <div className="practice">
             <h1> Practice Time </h1>
-            <div>Click on a flashcard to see the other side!</div>
             <h2>Number of Sets: {sets}</h2>
             <button onClick={() => newSet(1)}>Another set?</button>
+            <div>Click on a flashcard to see the other side!</div>
             <hr /><br />
             {loaded ?
-                <CardList card={card} removeFromDom={removeFromDom} /> //true
+                <CardList card={card} removeFromDom={removeFromDom} sets={sets} /> //true
                 :
                 <div>I know its here somewhere...</div> //false
             }
