@@ -49,12 +49,8 @@ ul{
 }
 .header{
   background-color:#000000e0;
-  /* Leaivng this in for now, I'm undecided on how I want to tackle the background image for the header */
-  /* background-image: url('/public/assets/Banner.png');
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-size:cover; */
   padding-bottom:1px;
+  opacity:.90;
 }
 .header h1{
   color:steelblue;
