@@ -8,8 +8,7 @@ Help us keep the Repo clean! Try to limit changes to one feature at a time.
 
 If you are looking to make your first contribution, follow the steps below.
 
-_If you're not comfortable with command line, [here are tutorials using GUI tools.](#tutorials-using-other-tools)_
-
+Feel free to reach out if you are unsure, and we'll try to figure it out together.
 
 <img align="right" width="300" src="https://firstcontributions.github.io/assets/Readme/fork.png" alt="fork this repository" />
 
