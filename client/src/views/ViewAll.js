@@ -43,7 +43,6 @@ const ViewAll = (props) => {
                 :
                 <div>I know its here somewhere...</div> //false
             }
-            <hr />
         </div>
     )
 
