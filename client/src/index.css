@@ -21,7 +21,7 @@ ul {
 
 .card {
   border-radius: 10px;
-  background-color: green;
+  background-color: ghostwhite;
   border: solid black 2px;
   margin: 5px;
   padding: 2px;
@@ -30,7 +30,32 @@ ul {
   text-align: left;
   position: initial;
 }
-
+.title {
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Overflow to expect possible very long titles */
+  overflow: auto;
+}
+.description h5 {
+  border-bottom: 2px solid lightblue;
+  text-align: left;
+}
+.description p {
+  line-height: 1.05em;
+  position: relative;
+  top: -200px;
+  text-align: left;
+}
+.blueline {
+    width: 100%;
+    background-color: rgba(0, 0, 255, .2);
+    height: 1px;
+    z-index: 5;
+    position: relative;
+    top: -32px;
+}
 .cardContainer {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -93,11 +118,11 @@ ul {
   height: 10%;
 }
 
-.acknoledgement {
+.acknowledgement {
   margin-left: 3%;
 }
 
-.acknoledgement ul {
+.acknowledgement ul {
   columns: 2;
 }
 
