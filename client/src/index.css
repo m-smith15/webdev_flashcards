@@ -38,7 +38,7 @@ ul {
   /* Overflow to expect possible very long titles */
   overflow: auto;
 }
-/* .description h5 {
+.description h5 {
   border-bottom: 2px solid lightblue;
   text-align: left;
 }
@@ -47,7 +47,7 @@ ul {
   position: relative;
   top: -200px;
   text-align: left;
-} */
+}
 .blueline {
     width: 100%;
     background-color: rgba(0, 0, 255, .2);
