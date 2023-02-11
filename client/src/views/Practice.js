@@ -43,7 +43,10 @@ const Practice = (props) => {
             {loaded ?
                 <CardList card={card} removeFromDom={removeFromDom} sets={sets} /> //true
                 :
-                <div>I know its here somewhere...</div> //false
+                <div class="d-flex align-items-center justify-content-center">
+                    <strong>I know they're here somewhere...</strong>
+                    <div class="spinner-border ms-5" role="status" aria-hidden="true"></div>
+                </div> //false
             }
             <hr />
         </div>
