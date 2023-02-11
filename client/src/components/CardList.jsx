@@ -12,24 +12,28 @@ const Card = ({card}) => {
     }
 
     return (
-        <ReactCardFlip className="card" isFlipped={isFlipped} flipDirection='horizontal'>
-            <div className="title CardFront" onClick={()=>setIsFlipped((prev) => !prev)}>
-                {card.cardTitle}
-                <button onClick={() => { editCard(card._id) }} className="btn btn-sm btn-secondary">
-                    Edit
-                </button>
+        <ReactCardFlip isFlipped={isFlipped} flipDirection='horizontal'>
+            <div className="card front" onClick={()=>setIsFlipped((prev) => !prev)}>
+                <div className="title">
+                    {card.cardTitle}
+                </div>
+                <div className='edit'>
+                    <button onClick={() => { editCard(card._id) }} className="btn btn-sm btn-secondary">
+                        Edit
+                    </button>
+                </div>
             </div>
-            <div className="description CardBack" onClick={()=>setIsFlipped((prev) => !prev)}>
-                <h5>{card.cardTitle}</h5><br/>
-                <hr class="blueline"/>
-                <hr class="blueline"/>
-                <hr class="blueline"/>
-                <hr class="blueline"/>
-                <hr class="blueline"/>
-                <hr class="blueline"/>
-                <hr class="blueline"/>
-                <hr class="blueline"/>
-                <hr class="blueline"/>
+            <div className="description card" onClick={()=>setIsFlipped((prev) => !prev)}>
+                <h5>{card.cardTitle}</h5>
+                <hr class="line"/>
+                <hr class="line"/>
+                <hr class="line"/>
+                <hr class="line"/>
+                <hr class="line"/>
+                <hr class="line"/>
+                <hr class="line"/>
+                <hr class="line"/>
+                <hr class="line"/>
                 <p>{card.cardDescription}</p>
             </div>
         </ReactCardFlip>
