@@ -6,10 +6,10 @@ const Update = (props) => {
     const { id } = useParams();
     //Conditionally render the api endpoint base url 
     const BASE_URL = process.env.NODE_ENV === 'production'
-    // for production 
-    ? process.env.REACT_APP_SERVER_URL
-    // or development environment
-    : 'http://localhost:8000'
+        // for production 
+        ? process.env.REACT_APP_SERVER_URL
+        // or development environment
+        : 'http://localhost:8000'
     const [cardTitle, setCardTitle] = useState("");
     const [cardDescription, setCardDescription] = useState("");
     const navigate = useNavigate();
@@ -43,38 +43,13 @@ const Update = (props) => {
             })
             .catch(err => console.error(err));
     }
-    // The home button in the header demands that this be
-    // changed to a back button? Gods? What say ye?
-    const navigateBack = () => {
-        navigate(-1)
-    }
 
 
     return (
         <div>
             <h1>Update a Card</h1>
-            <form onSubmit={updateCard}>
-                <p>
-                    <label>Card</label><br />
-                    <input type="text"
-                        name="cardTitle"
-                        value={cardTitle}
-                        onChange={(e) => { setCardTitle(e.target.value) }} />
-                </p>
-                <p>
-                    <label>cardDescription</label><br />
-                    <textarea type="text"
-                        name="cardDescription"
-                        value={cardDescription}
-                        onChange={(e) => { setCardDescription(e.target.value) }} />
-                </p>
-                <input type="submit" className='btn btn-sm btn-success' value="Update Flashcard" />
-                || 
-                <button className='btn btn-sm btn-danger' onClick={(e) => { deleteCard(id) }}>
-                    Delete Card
-                </button>
-            </form> <br />
-            <button onClick={() => navigate(-1)}>
+            <CardForm formSubmitHandler={createCard} title={''} desc={''} inputVal={'Update'}/>
+            <button className='btn btn-dark' onClick={() => navigate(-1)}>
                 Back
             </button> 
         </div>
