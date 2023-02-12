@@ -22,7 +22,7 @@ const CardForm = (props) => {
                     <textarea id='desc' className='form-control h-100' rows='6' onChange={(e) => setCardDescription(e.target.value)} value={cardDescription} placeholder='(Relational Database Management System) i.e. MySql, Postgres, etc.'/>
                     <label for='desc'>Description</label>
                 </div>
-                <input className='btn btn-dark btn-md' type='submit' value={inputVal} />
+                <input className='btn btn-primary btn-md' type='submit' value={inputVal} />
             </form>
         </div>
     )
