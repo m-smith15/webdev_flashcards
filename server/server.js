@@ -20,5 +20,5 @@ process.env.CLIENT_URL
 // ELSE, IN DEV ENVIRONMENT, NO CORS SETTINGS NECESSARY
 : app.use(cors());
 require('./routes/card.routes')(app);
-app.listen(port, () => console.log(`Spinning up on port: ${port}`) );
+app.listen(port, () => console.log(`Spinning up dev environment on port: ${port}`) );
 
