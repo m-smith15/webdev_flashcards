@@ -4,9 +4,11 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 const Update = (props) => {
     const { id } = useParams();
-    //Conditionally render the api endpoint base url for production or development environment
+    //Conditionally render the api endpoint base url 
     const BASE_URL = process.env.NODE_ENV === 'production'
+    // for production 
     ? process.env.REACT_APP_SERVER_URL
+    // or development environment
     : 'http://localhost:8000'
     const [cardTitle, setCardTitle] = useState("");
     const [cardDescription, setCardDescription] = useState("");
@@ -28,7 +30,8 @@ const Update = (props) => {
         })
             .then(res => 
                 console.log(res),
-                navigate('/'))
+                // after editing go back
+                navigate(-1))
             .catch(err => console.error(err));
     }
 
@@ -36,13 +39,14 @@ const Update = (props) => {
     const deleteCard = (cardId) => {
         axios.delete(BASE_URL + '/api/card/' + cardId)
             .then(res => {
-                navigate("/");
+                navigate(-1);
             })
             .catch(err => console.error(err));
     }
-
-    const navigateToHome = () => {
-        navigate('/')
+    // The home button in the header demands that this be
+    // changed to a back button? Gods? What say ye?
+    const navigateBack = () => {
+        navigate(-1)
     }
 
 
@@ -64,14 +68,15 @@ const Update = (props) => {
                         value={cardDescription}
                         onChange={(e) => { setCardDescription(e.target.value) }} />
                 </p>
-                <input type="submit" value="Update Flashcard" />
+                <input type="submit" className='btn btn-sm btn-success' value="Update Flashcard" />
+                || 
+                <button className='btn btn-sm btn-danger' onClick={(e) => { deleteCard(id) }}>
+                    Delete Card
+                </button>
             </form> <br />
-            <button onClick={navigateToHome}>
-                Back to home
-            </button> |
-            | <button onClick={(e) => { deleteCard(id) }}>
-                Delete Card
-            </button>
+            <button onClick={() => navigate(-1)}>
+                Back
+            </button> 
         </div>
     )
 }

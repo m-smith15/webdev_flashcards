@@ -27,16 +27,16 @@ const CardForm = () => {
 
     return (
         <div>
-            <form onSubmit={formSubmitHandler}>
-                <div>
-                    <label>Title</label>
-                    <input type="text" onChange={(e) => setCardTitle(e.target.value)} value={cardTitle} />
+            <form onSubmit={formSubmitHandler} className='col-4 m-auto'>
+                <div className='mb-3 form-floating'>
+                    <input type='text' id='title' className='form-control h-25' onChange={(e) => setCardTitle(e.target.value)} value={cardTitle} placeholder='RDBMS'/>
+                    <label for='title'>Title</label>
                 </div>
-                <div>
-                    <label>Description</label>
-                    <textarea onChange={(e) => setDescription(e.target.value)} value={cardDescription} />
+                <div className='mb-3 form-floating'>
+                    <textarea id='desc' className='form-control h-100' rows='6' onChange={(e) => setDescription(e.target.value)} value={cardDescription} placeholder='(Relational Database Management System) i.e. MySql, Postgres, etc.'/>
+                    <label for='desc'>Description</label>
                 </div>
-                <input type="submit" value="Add Card" />
+                <input className='btn btn-dark btn-md' type='submit' value='Add Card' />
             </form>
         </div>
     )

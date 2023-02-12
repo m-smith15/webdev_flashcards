@@ -5,19 +5,19 @@ import { useNavigate } from 'react-router-dom';
 
 const Create = (props) => {
     const navigate = useNavigate();
-
-    const navigateToHome = () => {
-        navigate('/')
+    // Goes Back. Don't care where, just goin' back...
+    const navigateBack = () => {
+        navigate(-1)
     }
-    
+
     return(
     <div>
         <h2>Create a new flashcard!</h2>
         <br/>
         <CardForm />
         <hr/>
-        <button onClick={navigateToHome}>
-            Back to home
+        <button className='btn btn-danger' onClick={navigateBack}>
+            Back
         </button>
     </div>
     )

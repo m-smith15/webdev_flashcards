@@ -18,9 +18,9 @@ const Header = () => {
         <div className="header">
             <h1> Web Dev Flashcards </h1>
             <div className="navigationBar">
-                <div className="navigationItem"><h2><button onClick={navigateToHome}>Home</button></h2></div>
-                <div className="navigationItem"><h2><button onClick={navigateToPractice}>Practice</button></h2></div>
-                <div className="navigationItem"><h2><button onClick={navigateToViewAll}>View All</button></h2></div>
+                <div className="navigationItem"><button type="button" className="btn btn-dark btn-lg" onClick={navigateToHome}><h2>Home</h2></button></div>
+                <div className="navigationItem"><button type="button" className="btn btn-dark btn-lg" onClick={navigateToPractice}><h2>Practice</h2></button></div>
+                <div className="navigationItem"><button type="button" className="btn btn-dark btn-lg" onClick={navigateToViewAll}><h2>View All</h2></button></div>
             </div>
         </div>
     )

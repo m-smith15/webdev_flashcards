@@ -37,15 +37,15 @@ const Practice = (props) => {
         <div className="practice">
             <h1> Practice Time </h1>
             <h2>Number of Sets: {sets}</h2>
-            <button onClick={() => newSet(1)}>Another set?</button>
-            <div>Click on a flashcard to see the other side!</div>
+            <button type="button" className="btn btn-light mb-2" onClick={() => newSet(1)}>Another set?</button>
+            <p>Click on a flashcard to see the other side!</p>
             <hr /><br />
             {loaded ?
                 <CardList card={card} removeFromDom={removeFromDom} sets={sets} /> //true
                 :
-                <div class="d-flex align-items-center justify-content-center">
+                <div className="d-flex align-items-center justify-content-center">
                     <strong>I know they're here somewhere...</strong>
-                    <div class="spinner-border ms-5" role="status" aria-hidden="true"></div>
+                    <div className="spinner-border ms-5" role="status" aria-hidden="true"></div>
                 </div> //false
             }
             <hr />
