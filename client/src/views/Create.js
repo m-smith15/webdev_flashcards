@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CardForm from '../components/CardForm';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -12,7 +12,7 @@ const Create = () => {
         ? process.env.REACT_APP_SERVER_URL
         // or development environment
         : 'http://localhost:8000';
-    const createCard = (card) => {
+    const createCard = card => {
         //preventDefault prevents page reload
         axios.post(BASE_URL + '/api/create/card', card)
             .then(res => 

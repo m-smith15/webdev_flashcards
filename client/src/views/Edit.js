@@ -23,11 +23,12 @@ const Update = () => {
             })
     }, []);
 
-    const updateCard = e => {
+    const updateCard = card => {
         axios.put(BASE_URL + '/api/card/' + id, card)
             .then(res => 
                 console.log(res),
-                // after editing go back
+                // after editing go to viewall?
+                // going back risks not loading the update on the card.
                 navigate(-1))
             .catch(err => console.error(err));
     }
@@ -48,14 +49,15 @@ const Update = () => {
                 <CardForm 
                     // pass update fn and text to form
                     onSubmitProp={updateCard} 
-                    initialTitle={card.title} 
-                    initialDesc={card.desc} 
+                    initialTitle={card.cardTitle} 
+                    initialDesc={card.cardDescription} 
                     inputVal={'Update'}
                     />
-                <button className='btn btn-danger' onClick={() => deleteCard()}>
+                <button className='btn btn-danger me-2' onClick={() => deleteCard(card._id)}>
                     Delete
                 </button> 
-                <button className='btn btn-dark' onClick={() => navigate(-1)}>
+                || 
+                <button className='btn btn-dark ms-2' onClick={() => navigate(-1)}>
                     Back
                 </button> 
                 </>)}
