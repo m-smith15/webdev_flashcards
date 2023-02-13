@@ -5,9 +5,9 @@ const CardForm = (props) => {
     const [cardTitle, setCardTitle] = useState(initialTitle);
     const [cardDescription, setCardDescription] = useState(initialDesc);
     const onSubmitHandler = (e) => {
+        //preventDefault prevents page reload
         e.preventDefault();
         onSubmitProp({cardTitle, cardDescription});
-        // then reset form?
     }
     
     

@@ -27,9 +27,8 @@ const Update = () => {
         axios.put(BASE_URL + '/api/card/' + id, card)
             .then(res =>
                 console.log(res),
-                // after editing go to viewall?
-                // going back risks not loading the update on the card.
-                navigate(-1))
+                // after editing go to viewall
+                navigate('/viewall'))
             .catch(err => console.error(err));
     }
 
