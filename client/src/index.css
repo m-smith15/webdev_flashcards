@@ -31,9 +31,9 @@ ul {
 }
 
 .front {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .title {
   font-size: 2em;
@@ -48,9 +48,9 @@ ul {
   top: -160px;
 }
 .line {
-    position: relative;
-    top: -8px;
-    margin-bottom: 0px;
+  position: relative;
+  top: -8px;
+  margin-bottom: 0px;
 }
 .cardContainer {
   display: grid;
@@ -89,7 +89,7 @@ ul {
 }
 
 .navigationItem button {
-  aborder: lightgrey solid 1px;
+  border: lightgrey solid 1px;
   background: transparent;
 }
 
