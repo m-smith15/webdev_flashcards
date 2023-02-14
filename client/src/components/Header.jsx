@@ -16,7 +16,7 @@ const Header = () => {
 
     return (
         <div className="header">
-            <h1> Web Dev Flashcards </h1>
+            <h1> WebDev Flashcards </h1>
             <div className="navigationBar">
                 <div className="navigationItem"><h2><button onClick={navigateToHome}>Home</button></h2></div>
                 <div className="navigationItem"><h2><button onClick={navigateToPractice}>Practice</button></h2></div>
