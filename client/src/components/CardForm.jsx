@@ -1,42 +1,39 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 
-//Conditionally render the api endpoint base url for production or development environment
-const BASE_URL = process.env.NODE_ENV === 'production'
-    ? process.env.REACT_APP_SERVER_URL
-    : 'http://localhost:8000'
-
-const CardForm = () => {
-    const [cardTitle, setCardTitle] = useState("");
-    const [cardDescription, setDescription] = useState("");
-    const navigate = useNavigate();
-
-    //preventDefault prevents page reload
-    const formSubmitHandler = (e) => {
-        e.preventDefault();
-        axios.post(BASE_URL + '/api/create/card', {
-            cardTitle,
-            cardDescription
-        })
-            .then(res => 
-                console.log(res),
-                navigate("/"))
-            .catch(err => console.log(err))
+const styles = {
+    error: {
+        color: "white",
+        marginTop: "0",
+        backgroundColor: "#B05C4B",
+        borderRadius: "50px"
     }
+}
 
+const CardForm = (props) => {
+    const {initialTitle, initialDesc, inputVal, onSubmitProp, errors} = props;
+    const [cardTitle, setCardTitle] = useState(initialTitle);
+    const [cardDescription, setCardDescription] = useState(initialDesc);
+    const onSubmitHandler = (e) => {
+        //prevents page reload
+        e.preventDefault();
+        // Lift state of card properties to parent view
+        onSubmitProp({cardTitle, cardDescription});
+    }
+    
+    
     return (
-        <div>
-            <form onSubmit={formSubmitHandler}>
-                <div>
+        <div className='mb-2'>
+            <form onSubmit={onSubmitHandler} className='col-4 m-auto'>
+                {errors.map((err,idx) => <p key={idx} style={ styles.error }>{err}</p>)}
+                <div className='mb-3 form-floating'>
+                    <input type='text' id='title' className='form-control h-25' onChange={(e) => setCardTitle(e.target.value)} value={cardTitle} placeholder='RDBMS'/>
                     <label>Title</label>
-                    <input type="text" onChange={(e) => setCardTitle(e.target.value)} value={cardTitle} />
                 </div>
-                <div>
+                <div className='mb-3 form-floating'>
+                    <textarea id='desc' className='form-control h-100' rows='6' onChange={(e) => setCardDescription(e.target.value)} value={cardDescription} placeholder='(Relational Database Management System) i.e. MySql, Postgres, etc.'/>
                     <label>Description</label>
-                    <textarea onChange={(e) => setDescription(e.target.value)} value={cardDescription} />
                 </div>
-                <input type="submit" value="Add Card" />
+                <input className='btn btn-primary btn-md' type='submit' value={inputVal} />
             </form>
         </div>
     )

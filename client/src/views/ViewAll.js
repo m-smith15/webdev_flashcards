@@ -34,16 +34,16 @@ const ViewAll = (props) => {
     return (
         <div className="viewall">
             <h1> Viewing All Flashcards</h1>
-            <div>See one that needs to be added?</div>
-            <button onClick={navigateToCreate}>
-                Create a new flashcard!</button>
+            <p>Need to add something?</p>
+            <button type="button" className="btn btn-light" onClick={navigateToCreate}>
+                + Create Flashcard</button>
             <hr /><br />
             {loaded ?
                 <CardList card={card} removeFromDom={removeFromDom} /> //true
                 :
-                <div class="d-flex align-items-center justify-content-center">
+                <div className="d-flex align-items-center justify-content-center">
                     <strong>I know they're here somewhere...</strong>
-                    <div class="spinner-border ms-5" role="status" aria-hidden="true"></div>
+                    <div className="spinner-border ms-5" role="status" aria-hidden="true"></div>
                 </div> //false
             }
         </div>
