@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from './Card';
 
-const CardList = (props) => {
+const CardList = ({card, sets}) => {
+    const [cardShowing, setCardShowing] = useState("");
+    const getCardShowing = (cardKey) => {
+        setCardShowing(cardKey)
+    }
     return (
         <div className="cardContainer container">
-            {props.card.map((card, i) =>
-                <Card card={card} key={`card-${i}`}/>
+            {card.map((card, i) =>
+                <Card 
+                    card={card} 
+                    key={i} 
+                    cardKey={`card-${i}`} 
+                    sets={sets} 
+                    onCardFlip={getCardShowing}
+                    cardShowing={cardShowing}
+                />
             )}
         </div>
     )
