@@ -101,7 +101,8 @@ ul {
   justify-content: space-between;
   background-color: #000000e0;
   color: lightgrey;
-  height: 10%;
+  height: 7%;
+  /* height: fit-content this could be useful post mobile responseiveness */
 }
 
 .acknowledgement {
