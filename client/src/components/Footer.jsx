@@ -10,8 +10,6 @@ const Footer = () => {
                     <li>Coren Frankel (he/they) <a href="https://www.linkedin.com/in/coren-frankel">LinkedIn </a> | <a href="https://github.com/coren-frankel">GitHub</a></li>
                 </ul>
             </div>
-            <div className="repoLink">Want to see how it was built? <br/>
-                Check out the repo over on <a href="https://github.com/m-smith15/webdev_flashcards">GitHub</a></div>
             <div className="gettingInvolved"> Want to get involved in the project? <br />
                 Learn more about getting involved <a href="https://github.com/m-smith15/webdev_flashcards/blob/master/makingcontributions.md">here</a>!
             </div>
