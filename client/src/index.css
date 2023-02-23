@@ -166,7 +166,7 @@ ul {
 }
 
 input:checked + .slider {
-  background-color: lightblue;
+  background-color: lightgrey;
 }
 
 input:focus + .slider {
