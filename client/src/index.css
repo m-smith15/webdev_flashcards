@@ -152,7 +152,9 @@ ul {
   -webkit-transition: .4s;
   transition: .4s;
 }
-
+.lightdarkToggle{
+  align-self:center;
+}
 .slider:before {
   position: absolute;
   content: "";
@@ -164,15 +166,12 @@ ul {
   -webkit-transition: .4s;
   transition: .4s;
 }
-
 input:checked + .slider {
   background-color: lightgrey;
 }
-
 input:focus + .slider {
   box-shadow: 0 0 1px lightgrey;
 }
-
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
