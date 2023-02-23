@@ -92,6 +92,9 @@ ul {
   border: lightgrey solid 1px;
   background: transparent;
 }
+.navigationItem {
+  align-self: center;
+}
 
 .footer {
   position: fixed;
