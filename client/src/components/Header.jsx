@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
     const navigate = useNavigate();
-    const [setTheme, theme] = useState(false);
+    const [theme, setTheme] = useState(false);
 
     const navigateToPractice = () => {
         navigate('/practice')
@@ -14,9 +14,9 @@ const Header = () => {
     const navigateToViewAll = () => {
         navigate('/viewall')
     }
-    const toggleThemeChange = (theme) => {
-        console.log(theme);
-        setTheme(!theme);
+    const toggleThemeChange = () => {
+        //true is night, false is light
+        setTheme(prevTheme => !prevTheme);
         console.log(theme);
     }
 
@@ -28,12 +28,12 @@ const Header = () => {
                 <div className="navigationItem"><button type="button" className="btn btn-dark" onClick={navigateToPractice}><h2>Practice</h2></button></div>
                 <div className="navigationItem"><button type="button" className="btn btn-dark" onClick={navigateToViewAll}><h2>View All</h2></button></div>
                 <div className="navigationItem lightdarkToggle">
-                    <h2>
-                        <label class="switch">
-                            <input type="checkbox" onClick={toggleThemeChange}/>
-                            <span class="slider" />
-                        </label>
+                    <h2>Theme
                     </h2>
+                        <label className="switch">
+                            <input type="checkbox" onClick={toggleThemeChange}/>
+                            <span className="slider" />
+                        </label>
                     </div>
             </div>
         </div>
