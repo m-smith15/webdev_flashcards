@@ -101,6 +101,7 @@ ul {
   display: inline-block;
   width: 60px;
   height: 34px;
+  /* default sizing looks to line up in mobile */
 }
 
 /* Hide default HTML checkbox */
@@ -128,6 +129,14 @@ ul {
   /* border: lightgrey solid 1px; */
   background: transparent;
 }
+.lightdarkToggle h2 {
+  background-image:url('/public/assets/moon.png');
+  background-size:contain;
+  height:25px;
+  width:25px;
+  margin-left:14px;
+}
+/* default/dark toggle */
 .slider:before {
   position: absolute;
   content: "";
@@ -145,6 +154,7 @@ input:checked + .slider {
 input:focus + .slider {
   box-shadow: 0 0 1px lightgrey;
 }
+/* toggled to light mode */
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
