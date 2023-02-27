@@ -20,7 +20,6 @@ const Header = () => {
         setTheme(prevTheme => !prevTheme);
 
         if(theme === false){
-            //change to light
             //header
             let newHeader = document.getElementsByClassName('header');
             newHeader[0].style.backgroundColor = 'lightgrey';
@@ -32,7 +31,6 @@ const Header = () => {
             let updateIcon = document.querySelector('.lightdarkToggle h2');
             updateIcon.style.backgroundImage = "url('/assets/sun.png')";
         } else{
-            //todo: copy down whats updates in light mode changes and update with default values
             //header
             let newHeader = document.getElementsByClassName('header');
             newHeader[0].style.backgroundColor = '#000000e0';
