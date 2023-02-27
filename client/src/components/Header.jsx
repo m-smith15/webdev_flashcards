@@ -18,34 +18,32 @@ const Header = () => {
         //true is night, false is light
         //can track with state so it should persist thoughout the site
         setTheme(prevTheme => !prevTheme);
+
         if(theme === false){
             //change to light
-            //todo: update - .header .footer .lightdarkToggle>h2 navigationItem>button>h2
-
             //header
-            let newHeader = document.getElementsByClassName('header')
+            let newHeader = document.getElementsByClassName('header');
             newHeader[0].style.backgroundColor = 'lightgrey';
             //footer
-            let newFooter = document.getElementsByClassName('footer')
+            let newFooter = document.getElementsByClassName('footer');
             newFooter[0].style.backgroundColor = 'lightgrey';
             newFooter[0].style.color = 'black';
             //icon
             let updateIcon = document.querySelector('.lightdarkToggle h2');
-            updateIcon.style.backgroundImage = "url('/assets/sun.png')"
+            updateIcon.style.backgroundImage = "url('/assets/sun.png')";
         } else{
             //todo: copy down whats updates in light mode changes and update with default values
             //header
-            let newHeader = document.getElementsByClassName('header')
+            let newHeader = document.getElementsByClassName('header');
             newHeader[0].style.backgroundColor = '#000000e0';
             //footer
-            let newFooter = document.getElementsByClassName('footer')
+            let newFooter = document.getElementsByClassName('footer');
             newFooter[0].style.backgroundColor = '#000000e0';
             newFooter[0].style.color = 'lightgrey';
             //icon
             let updateIcon = document.querySelector('.lightdarkToggle h2');
-            updateIcon.style.backgroundImage = "url('/assets/moon.png')"
+            updateIcon.style.backgroundImage = "url('/assets/moon.png')";
         }
-        console.log(theme);
     }
 
     return (
