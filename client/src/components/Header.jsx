@@ -22,10 +22,15 @@ const Header = () => {
             //change to light
             //todo: update - .header .footer .lightdarkToggle>h2 navigationItem>button>h2
 
-            //header and footer
+            //header
             let newHeader = document.getElementsByClassName('header')
+            newHeader[0].style.backgroundColor = 'lightgrey';
+            //footer
             let newFooter = document.getElementsByClassName('footer')
-            console.log(test);
+            newFooter[0].style.backgroundColor = 'lightgrey';
+            newFooter[0].style.color = 'black';
+        } else{
+            //todo: copy down whats updates in light mode changes and update with default values
         }
         console.log(theme);
     }
