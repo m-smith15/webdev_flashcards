@@ -30,6 +30,11 @@ const Header = () => {
             //icon
             let updateIcon = document.querySelector('.lightdarkToggle h2');
             updateIcon.style.backgroundImage = "url('/assets/sun.png')";
+            //button border
+            let updateButtonBorder = document.querySelectorAll('.navigationItem button');
+            for(let x = 0; x < updateButtonBorder.length; x++){
+                updateButtonBorder[x].style.border = "black solid 1px";
+            }
         } else{
             //header
             let newHeader = document.getElementsByClassName('header');
@@ -41,6 +46,11 @@ const Header = () => {
             //icon
             let updateIcon = document.querySelector('.lightdarkToggle h2');
             updateIcon.style.backgroundImage = "url('/assets/moon.png')";
+            //button borders
+            let updateButtonBorder = document.querySelectorAll('.navigationItem button');
+            for(let x = 0; x < updateButtonBorder.length; x++){
+                updateButtonBorder[x].style.border = "lightgrey solid 1px";
+            }
         }
     }
 
