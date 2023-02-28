@@ -79,7 +79,7 @@ ul {
 }
 
 .header h1 {
-  color: steelblue;
+  color: #337983;
 }
 
 .navigationBar {
@@ -90,7 +90,7 @@ ul {
 
 .navigationItem button {
   background: transparent;
-  color: steelblue;
+  color: #337983;
   border: lightgrey solid 1px;
 }
 .navigationItem {
@@ -123,6 +123,7 @@ ul {
   background-color: #317a83;
   -webkit-transition: .4s;
   transition: .4s;
+  border-radius: 50px;
 }
 .lightdarkToggle{
   align-self:center;
@@ -148,6 +149,7 @@ ul {
   background-color: ghostwhite;
   -webkit-transition: .4s;
   transition: .4s;
+  border-radius: 50px;
 }
 /* toggled to light mode */
 input:checked + .slider:before {
