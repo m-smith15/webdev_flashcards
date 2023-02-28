@@ -120,7 +120,7 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #000000e0;
+  background-color: #317a83;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -148,12 +148,6 @@ ul {
   background-color: ghostwhite;
   -webkit-transition: .4s;
   transition: .4s;
-}
-input:checked + .slider {
-  background-color: lightgrey;
-}
-input:focus + .slider {
-  box-shadow: 0 0 1px lightgrey;
 }
 /* toggled to light mode */
 input:checked + .slider:before {
