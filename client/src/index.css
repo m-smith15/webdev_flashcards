@@ -89,9 +89,9 @@ ul {
 }
 
 .navigationItem button {
-  border: lightgrey solid 1px;
   background: transparent;
   color: steelblue;
+  border: lightgrey solid 1px;
 }
 .navigationItem {
   align-self: center;
