@@ -18,6 +18,7 @@ Following graduation from Coding Dojo’s coding bootcamp and attempting to ente
 When I mentioned the idea to Coren, the idea resonated with him as well. We immediately started collaborating to get the groundwork deployed to a (free) publicly available site and begin work on building out the flashcard database so we can be more well rounded developers.
 
 ## Contributors
+![GitHub Contributors Image](https://contrib.rocks/image?repo=m-smith15/webdev_flashcards)
 | Name | GitHub | LinkedIn |
 | :---: | :---: | :---: |
 | Coren "Kern" Frankel | [GitHub](https://github.com/coren-frankel) | [LinkedIn](https://www.linkedin.com/in/coren-frankel/)
