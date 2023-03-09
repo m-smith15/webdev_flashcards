@@ -11,6 +11,7 @@ const Practice = (props) => {
     const [card, setCard] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const [sets, setSets] = useState(0);
+    const [cardShowing, setCardShowing] = useState("");
 
     useEffect(() => {
         axios.get(BASE_URL + '/api/random')
@@ -30,7 +31,8 @@ const Practice = (props) => {
     // could add possiblity to call more than 3 cards
     //for now hard coded to another "set" of 3
     const newSet = (number)=> {
-        setSets(sets+1)
+        setSets(sets+1);
+        setCardShowing("");
     }
 
     return (
@@ -41,7 +43,13 @@ const Practice = (props) => {
             <p>Click on a flashcard to see the other side!</p>
             <hr /><br />
             {loaded ?
-                <CardList card={card} removeFromDom={removeFromDom} sets={sets} /> //true
+                <CardList //true
+                    card={card} 
+                    removeFromDom={removeFromDom} 
+                    sets={sets} 
+                    cardShowing={cardShowing}
+                    setCardShowing={setCardShowing}
+                />
                 :
                 <div className="d-flex align-items-center justify-content-center">
                     <strong>I know they're here somewhere...</strong>

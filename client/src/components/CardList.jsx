@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Card from './Card';
 
-const CardList = ({card, sets}) => {
-    const [cardShowing, setCardShowing] = useState("");
+const CardList = ({card, sets, cardShowing, setCardShowing}) => {
+    
     const getCardShowing = (cardKey) => {
         setCardShowing(cardKey)
     }
