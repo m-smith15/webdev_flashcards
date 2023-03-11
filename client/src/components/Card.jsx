@@ -9,6 +9,7 @@ const Card = (props) => {
     // Change in set resets cards
     useEffect(() => {
         setIsFlipped(false)
+        
     }, [sets])
     // Change in cardShowing unflips all but the match to cardKey
     useEffect(() => {
