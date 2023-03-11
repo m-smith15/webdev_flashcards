@@ -118,5 +118,8 @@ Now submit the pull request.
 
 Soon We'll be merging all your changes into the main branch of this project. You will get a notification email once the changes have been merged.
 
+*When resolving an issue, be sure to include specific verbiage: ```close, closes, closed, fix, fixes, fixed, resolve, resolves, resolved``` followed by the issue number. 
+     Ex. resolves #10
+
 ### Acknoledgements
 Huge thanks to the folks who made this README template! You can find the original [here](https://github.com/firstcontributions/first-contributions) 
