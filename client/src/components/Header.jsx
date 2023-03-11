@@ -22,10 +22,10 @@ const Header = () => {
         if(theme === false){
             //header
             let newHeader = document.getElementsByClassName('header');
-            newHeader[0].style.backgroundColor = 'lightgrey';
+            newHeader[0].style.backgroundColor = '#d3d3d3e0';
             //footer
             let newFooter = document.getElementsByClassName('footer');
-            newFooter[0].style.backgroundColor = 'lightgrey';
+            newFooter[0].style.backgroundColor = '#d3d3d3e0';
             newFooter[0].style.color = 'black';
             //icon
             let updateIcon = document.querySelector('.lightdarkToggle h2');
