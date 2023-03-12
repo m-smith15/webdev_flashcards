@@ -23,6 +23,7 @@ When I mentioned the idea to Coren, the idea resonated with him as well. We imme
 | :---: | :---: | :---: |
 | Coren "Kern" Frankel | [GitHub](https://github.com/coren-frankel) | [LinkedIn](https://www.linkedin.com/in/coren-frankel/)
 | Mack Smith | [GitHub](https://github.com/m-smith15) | [LinkedIn](https://www.linkedin.com/in/macksmithlambeau/)
+| Vinit Hemadri | [GitHub](https://github.com/Vinitvh) | ---
 
 ## Getting Involved
 If you’d like to get involved in helping to build out this application, then reach out to Mack or Coren on LinkedIn by sending either of us a message. To give you an idea of what collaboration looks like -
