@@ -11,6 +11,7 @@ const ViewAll = (props) => {
     const [card, setCard] = useState([]);
     const [loaded, setLoaded] = useState(false);
     const navigate = useNavigate();
+    const [cardShowing, setCardShowing] = useState("");
 
     //getting all cards
     useEffect(() => {
@@ -39,7 +40,12 @@ const ViewAll = (props) => {
                 + Create Flashcard</button>
             <hr /><br />
             {loaded ?
-                <CardList card={card} removeFromDom={removeFromDom} /> //true
+                <CardList //true
+                    card={card} 
+                    removeFromDom={removeFromDom} 
+                    cardShowing={cardShowing}
+                    setCardShowing={setCardShowing}
+                /> 
                 :
                 <div className="d-flex align-items-center justify-content-center">
                     <strong>I know they're here somewhere...</strong>
