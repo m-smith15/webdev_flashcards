@@ -21,6 +21,7 @@ function App() {
         <Route element={<Edit/>} path="/edit/:id" />
         <Route element={<Practice/>} path="/practice"/>
         <Route element={<ViewAll/>} path="/viewall"/>
+        <Route element={<Acknoledgement/>} path="/credits"/>
         <Route element={<NotFound/>} status={404} path="*" />
       </Routes>
       <Footer />
