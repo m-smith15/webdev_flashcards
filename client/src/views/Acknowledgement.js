@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Acknoledgement = () => {
+const Acknowledgement = () => {
 
     //TODO: 2 approaches I see to this. Can either hard-code in names/links or pass them in via a variable.
         //I like the idea of the variable, it adds some reusability. I can also see this getting very, very long. Perhaps there'd be a way to pull the table from readme? Or use the contributors list??
@@ -38,4 +38,4 @@ const Acknoledgement = () => {
         </div>
     )
 }
-export default Acknoledgement;
+export default Acknowledgement;
