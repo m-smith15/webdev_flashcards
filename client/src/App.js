@@ -9,6 +9,7 @@ import NotFound from './views/NotFound';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import ViewAll from './views/ViewAll';
+import Acknowledgement from './views/Acknowledgement';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route element={<Edit/>} path="/edit/:id" />
         <Route element={<Practice/>} path="/practice"/>
         <Route element={<ViewAll/>} path="/viewall"/>
+        <Route element={<Acknowledgement/>} path="/credits"/>
         <Route element={<NotFound/>} status={404} path="*" />
       </Routes>
       <Footer />
