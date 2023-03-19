@@ -190,3 +190,10 @@ input:checked + .slider:before {
   font-weight:bold;
   margin-bottom: 5%;
 }
+
+.contributors{
+  display: flex;
+  justify-content: center;
+  background-color: #091618;
+  color: #337983;
+}
