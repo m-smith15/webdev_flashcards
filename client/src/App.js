@@ -9,6 +9,7 @@ import NotFound from './views/NotFound';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import ViewAll from './views/ViewAll';
+import Acknoledgement from './views/Acknoledgement';
 
 
 function App() {
